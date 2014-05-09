@@ -1,0 +1,33 @@
+{
+    "name": "akeneo/spreadsheet-parser-bundle",
+    "type": "symfony-bundle",
+    "description": "Akeneo spreadsheet parser bundle",
+    "keywords": ["akeneo", "excel", "xlsx", "reader", "parser", "spreadsheet"],
+    "homepage": "http://akeneo.com",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Antoine Guigan",
+            "email": "antoine@akeneo.com",
+            "homepage": "http://akeneo.com"
+        }
+    ],
+    "repositories": [
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/symfony": "1.*.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Pim\\Bundle\\SpreadsheetParserBundle\\": "" }
+    },
+    "target-dir": "Pim/Bundle/SpreadsheetParserBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
