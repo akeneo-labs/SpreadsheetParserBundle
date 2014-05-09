@@ -16,7 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/symfony": "1.*.*",
+        "symfony/symfony": "2.*",
         "akeneo/spreadsheet-parser": "1.0.*"
     },
     "config": {
