@@ -1,24 +1,24 @@
 parameters:
-    akeneo_spreadsheet_parser.xlsx.archive.class:                   Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\Archive
-    akeneo_spreadsheet_parser.xlsx.archive_loader.class:            Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\ArchiveLoader
-    akeneo_spreadsheet_parser.xlsx.shared_strings.class:            Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\SharedStrings
-    akeneo_spreadsheet_parser.xlsx.shared_strings_loader.class:     Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\SharedStringsLoader
-    akeneo_spreadsheet_parser.xlsx.relationships.class:             Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\Relationships
-    akeneo_spreadsheet_parser.xlsx.relationships_loader.class:      Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RelationshipsLoader
-    akeneo_spreadsheet_parser.xlsx.styles.class:                    Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\Styles
-    akeneo_spreadsheet_parser.xlsx.styles_loader.class:             Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\StylesLoader
-    akeneo_spreadsheet_parser.xlsx.worksheet_list_reader.class:     Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\WorksheetListReader
-    akeneo_spreadsheet_parser.xlsx.row_iterator.class:              Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RowIterator
-    akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RowIteratorFactory
-    akeneo_spreadsheet_parser.xlsx.value_transformer.class:         Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\ValueTransformer
-    akeneo_spreadsheet_parser.xlsx.value_transformer_factory.class: Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\ValueTransformerFactory
-    akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RowIteratorFactory
-    akeneo_spreadsheet_parser.xlsx.date_transformer.class:          Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\DateTransformer
-    akeneo_spreadsheet_parser.xlsx.workbook.class:                  Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\Workbook
-    akeneo_spreadsheet_parser.xlsx.workbook_loader.class:           Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\WorkbookLoader
-    akeneo_spreadsheet_parser.xlsx.column_index_transformer.class:  Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\ColumnIndexTransformer
-    akeneo_spreadsheet_parser.xlsx.row_builder.class:               Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RowBuilder
-    akeneo_spreadsheet_parser.xlsx.row_builder_factory.class:       Akeneo\Bundle\SpreadsheetParserBundle\Xlsx\RowBuilderFactory
+    akeneo_spreadsheet_parser.xlsx.archive.class:                   Akeneo\Component\SpreadsheetParser\Xlsx\Archive
+    akeneo_spreadsheet_parser.xlsx.archive_loader.class:            Akeneo\Component\SpreadsheetParser\Xlsx\ArchiveLoader
+    akeneo_spreadsheet_parser.xlsx.shared_strings.class:            Akeneo\Component\SpreadsheetParser\Xlsx\SharedStrings
+    akeneo_spreadsheet_parser.xlsx.shared_strings_loader.class:     Akeneo\Component\SpreadsheetParser\Xlsx\SharedStringsLoader
+    akeneo_spreadsheet_parser.xlsx.relationships.class:             Akeneo\Component\SpreadsheetParser\Xlsx\Relationships
+    akeneo_spreadsheet_parser.xlsx.relationships_loader.class:      Akeneo\Component\SpreadsheetParser\Xlsx\RelationshipsLoader
+    akeneo_spreadsheet_parser.xlsx.styles.class:                    Akeneo\Component\SpreadsheetParser\Xlsx\Styles
+    akeneo_spreadsheet_parser.xlsx.styles_loader.class:             Akeneo\Component\SpreadsheetParser\Xlsx\StylesLoader
+    akeneo_spreadsheet_parser.xlsx.worksheet_list_reader.class:     Akeneo\Component\SpreadsheetParser\Xlsx\WorksheetListReader
+    akeneo_spreadsheet_parser.xlsx.row_iterator.class:              Akeneo\Component\SpreadsheetParser\Xlsx\RowIterator
+    akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Component\SpreadsheetParser\Xlsx\RowIteratorFactory
+    akeneo_spreadsheet_parser.xlsx.value_transformer.class:         Akeneo\Component\SpreadsheetParser\Xlsx\ValueTransformer
+    akeneo_spreadsheet_parser.xlsx.value_transformer_factory.class: Akeneo\Component\SpreadsheetParser\Xlsx\ValueTransformerFactory
+    akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Component\SpreadsheetParser\Xlsx\RowIteratorFactory
+    akeneo_spreadsheet_parser.xlsx.date_transformer.class:          Akeneo\Component\SpreadsheetParser\Xlsx\DateTransformer
+    akeneo_spreadsheet_parser.xlsx.workbook.class:                  Akeneo\Component\SpreadsheetParser\Xlsx\Workbook
+    akeneo_spreadsheet_parser.xlsx.workbook_loader.class:           Akeneo\Component\SpreadsheetParser\Xlsx\WorkbookLoader
+    akeneo_spreadsheet_parser.xlsx.column_index_transformer.class:  Akeneo\Component\SpreadsheetParser\Xlsx\ColumnIndexTransformer
+    akeneo_spreadsheet_parser.xlsx.row_builder.class:               Akeneo\Component\SpreadsheetParser\Xlsx\RowBuilder
+    akeneo_spreadsheet_parser.xlsx.row_builder_factory.class:       Akeneo\Component\SpreadsheetParser\Xlsx\RowBuilderFactory
 
 services:
     akeneo_spreadsheet_parser.xlsx.archive_loader:
