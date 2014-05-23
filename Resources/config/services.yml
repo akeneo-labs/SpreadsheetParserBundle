@@ -79,3 +79,6 @@ services:
             - @akeneo_spreadsheet_parser.xlsx.value_transformer_factory
             - @akeneo_spreadsheet_parser.xlsx.row_iterator_factory
             - %akeneo_spreadsheet_parser.xlsx.workbook.class%
+
+    akeneo_spreadsheet_parser.workbook_loader:
+        alias: akeneo_spreadsheet_parser.xlsx.workbook_loader
