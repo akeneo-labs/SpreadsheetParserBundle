@@ -1,6 +1,6 @@
 <?php
 
-namespace Akeneo\Bundle\SpreadsheetParserBundle\DependencyInjection;
+namespace Akeneo\Bundle\SpreadsheetParserBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

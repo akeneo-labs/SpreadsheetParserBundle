@@ -9,7 +9,6 @@ services:
     akeneo_spreadsheet_parser.csv.row_iterator_factory:
         class: %akeneo_spreadsheet_parser.csv.row_iterator_factory.class%
         arguments:
-            - @akeneo_spreadsheet_parser.csv.row_builder_factory
             - %akeneo_spreadsheet_parser.csv.row_iterator.class%
 
     akeneo_spreadsheet_parser.csv.spreadsheet_loader:
@@ -19,4 +18,4 @@ services:
             - %akeneo_spreadsheet_parser.csv.spreadsheet.class%
             - %akeneo_spreadsheet_parser.csv.sheet_name%
         tags:
-            - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: xlsx }
+            - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: csv }
