@@ -1,0 +1,22 @@
+parameters:
+    akeneo_spreadsheet_parser.csv.row_iterator.class:              Akeneo\Component\SpreadsheetParser\Csv\RowIterator
+    akeneo_spreadsheet_parser.csv.row_iterator_factory.class:      Akeneo\Component\SpreadsheetParser\Csv\RowIteratorFactory
+    akeneo_spreadsheet_parser.csv.spreadsheet.class:               Akeneo\Component\SpreadsheetParser\Csv\Spreadsheet
+    akeneo_spreadsheet_parser.csv.spreadsheet_loader.class:        Akeneo\Component\SpreadsheetParser\Csv\SpreadsheetLoader
+    akeneo_spreadsheet_parser.csv.sheet_name:                      default
+
+services:
+    akeneo_spreadsheet_parser.csv.row_iterator_factory:
+        public: false
+        class: %akeneo_spreadsheet_parser.csv.row_iterator_factory.class%
+        arguments:
+            - %akeneo_spreadsheet_parser.csv.row_iterator.class%
+
+    akeneo_spreadsheet_parser.csv.spreadsheet_loader:
+        class: %akeneo_spreadsheet_parser.csv.spreadsheet_loader.class%
+        arguments:
+            - @akeneo_spreadsheet_parser.csv.row_iterator_factory
+            - %akeneo_spreadsheet_parser.csv.spreadsheet.class%
+            - %akeneo_spreadsheet_parser.csv.sheet_name%
+        tags:
+            - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: csv }
