@@ -1,0 +1,6 @@
+parameters:
+    akeneo_spreadsheet_parser.spreadsheet_loader.class: Akeneo\Component\SpreadsheetParser\SpreadsheetLoader
+
+services:
+    akeneo_spreadsheet_parser.spreadsheet_loader:
+        class: %akeneo_spreadsheet_parser.spreadsheet_loader.class%

@@ -2,6 +2,7 @@
 
 namespace Akeneo\Bundle\SpreadsheetParserBundle;
 
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -13,4 +14,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class AkeneoSpreadsheetParserBundle extends Bundle
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function build(ContainerBuilder $container)
+    {
+        $container->addCompilerPass(new DependencyInjection\SpreadsheetLoaderPass);
+    }
 }

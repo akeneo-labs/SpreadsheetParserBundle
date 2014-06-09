@@ -12,10 +12,9 @@ parameters:
     akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Component\SpreadsheetParser\Xlsx\RowIteratorFactory
     akeneo_spreadsheet_parser.xlsx.value_transformer.class:         Akeneo\Component\SpreadsheetParser\Xlsx\ValueTransformer
     akeneo_spreadsheet_parser.xlsx.value_transformer_factory.class: Akeneo\Component\SpreadsheetParser\Xlsx\ValueTransformerFactory
-    akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class:      Akeneo\Component\SpreadsheetParser\Xlsx\RowIteratorFactory
     akeneo_spreadsheet_parser.xlsx.date_transformer.class:          Akeneo\Component\SpreadsheetParser\Xlsx\DateTransformer
-    akeneo_spreadsheet_parser.xlsx.workbook.class:                  Akeneo\Component\SpreadsheetParser\Xlsx\Workbook
-    akeneo_spreadsheet_parser.xlsx.workbook_loader.class:           Akeneo\Component\SpreadsheetParser\Xlsx\WorkbookLoader
+    akeneo_spreadsheet_parser.xlsx.spreadsheet.class:               Akeneo\Component\SpreadsheetParser\Xlsx\Spreadsheet
+    akeneo_spreadsheet_parser.xlsx.spreadsheet_loader.class:        Akeneo\Component\SpreadsheetParser\Xlsx\SpreadsheetLoader
     akeneo_spreadsheet_parser.xlsx.column_index_transformer.class:  Akeneo\Component\SpreadsheetParser\Xlsx\ColumnIndexTransformer
     akeneo_spreadsheet_parser.xlsx.row_builder.class:               Akeneo\Component\SpreadsheetParser\Xlsx\RowBuilder
     akeneo_spreadsheet_parser.xlsx.row_builder_factory.class:       Akeneo\Component\SpreadsheetParser\Xlsx\RowBuilderFactory
@@ -23,6 +22,7 @@ parameters:
 services:
     akeneo_spreadsheet_parser.xlsx.archive_loader:
         class: %akeneo_spreadsheet_parser.xlsx.archive_loader.class%
+        public: false
         arguments:
             - %akeneo_spreadsheet_parser.xlsx.archive.class%
 
@@ -68,8 +68,8 @@ services:
             - @akeneo_spreadsheet_parser.xlsx.column_index_transformer
             - %akeneo_spreadsheet_parser.xlsx.row_iterator.class%
 
-    akeneo_spreadsheet_parser.xlsx.workbook_loader:
-        class: %akeneo_spreadsheet_parser.xlsx.workbook_loader.class%
+    akeneo_spreadsheet_parser.xlsx.spreadsheet_loader:
+        class: %akeneo_spreadsheet_parser.xlsx.spreadsheet_loader.class%
         arguments:
             - @akeneo_spreadsheet_parser.xlsx.archive_loader
             - @akeneo_spreadsheet_parser.xlsx.relationships_loader
@@ -78,7 +78,6 @@ services:
             - @akeneo_spreadsheet_parser.xlsx.worksheet_list_reader
             - @akeneo_spreadsheet_parser.xlsx.value_transformer_factory
             - @akeneo_spreadsheet_parser.xlsx.row_iterator_factory
-            - %akeneo_spreadsheet_parser.xlsx.workbook.class%
-
-    akeneo_spreadsheet_parser.workbook_loader:
-        alias: akeneo_spreadsheet_parser.xlsx.workbook_loader
+            - %akeneo_spreadsheet_parser.xlsx.spreadsheet.class%
+        tags:
+            - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: xlsx }
