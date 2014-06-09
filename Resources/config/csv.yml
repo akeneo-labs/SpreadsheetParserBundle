@@ -7,6 +7,7 @@ parameters:
 
 services:
     akeneo_spreadsheet_parser.csv.row_iterator_factory:
+        public: false
         class: %akeneo_spreadsheet_parser.csv.row_iterator_factory.class%
         arguments:
             - %akeneo_spreadsheet_parser.csv.row_iterator.class%

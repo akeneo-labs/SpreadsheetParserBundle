@@ -28,41 +28,50 @@ services:
 
     akeneo_spreadsheet_parser.xlsx.shared_strings_loader:
         class: %akeneo_spreadsheet_parser.xlsx.shared_strings_loader.class%
+        public: false
         arguments:
             - %akeneo_spreadsheet_parser.xlsx.shared_strings.class%
 
     akeneo_spreadsheet_parser.xlsx.relationships_loader:
         class: %akeneo_spreadsheet_parser.xlsx.relationships_loader.class%
+        public: false
         arguments:
             - %akeneo_spreadsheet_parser.xlsx.relationships.class%
 
     akeneo_spreadsheet_parser.xlsx.styles_loader:
         class: %akeneo_spreadsheet_parser.xlsx.styles_loader.class%
+        public: false
         arguments:
             - %akeneo_spreadsheet_parser.xlsx.styles.class%
 
     akeneo_spreadsheet_parser.xlsx.worksheet_list_reader:
         class: %akeneo_spreadsheet_parser.xlsx.worksheet_list_reader.class%
+        public: false
 
     akeneo_spreadsheet_parser.xlsx.date_transformer:
         class: %akeneo_spreadsheet_parser.xlsx.date_transformer.class%
+        public: false
 
     akeneo_spreadsheet_parser.xlsx.column_index_transformer:
         class: %akeneo_spreadsheet_parser.xlsx.column_index_transformer.class%
+        public: false
 
     akeneo_spreadsheet_parser.xlsx.value_transformer_factory:
         class: %akeneo_spreadsheet_parser.xlsx.value_transformer_factory.class%
+        public: false
         arguments:
             - @akeneo_spreadsheet_parser.xlsx.date_transformer
             - %akeneo_spreadsheet_parser.xlsx.value_transformer.class%
 
     akeneo_spreadsheet_parser.xlsx.row_builder_factory:
         class: %akeneo_spreadsheet_parser.xlsx.row_builder_factory.class%
+        public: false
         arguments:
             - %akeneo_spreadsheet_parser.xlsx.row_builder.class%
 
     akeneo_spreadsheet_parser.xlsx.row_iterator_factory:
         class: %akeneo_spreadsheet_parser.xlsx.row_iterator_factory.class%
+        public: false
         arguments:
             - @akeneo_spreadsheet_parser.xlsx.row_builder_factory
             - @akeneo_spreadsheet_parser.xlsx.column_index_transformer
