@@ -63,5 +63,9 @@ class SpreadsheetParserTest extends \Symfony\Bundle\FrameworkBundle\Test\WebTest
             'Akeneo\Component\SpreadsheetParser\Xlsx\Spreadsheet',
             $loader->open(__DIR__ . '/fixtures/test.xlsx')
         );
+        $this->assertInstanceOf(
+            'Akeneo\Component\SpreadsheetParser\Xlsx\Spreadsheet',
+            $loader->open(__DIR__ . '/fixtures/test.xlsm')
+        );
     }
 }

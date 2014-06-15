@@ -90,3 +90,5 @@ services:
             - %akeneo_spreadsheet_parser.xlsx.spreadsheet.class%
         tags:
             - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: xlsx }
+            - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: xlsm }
+
