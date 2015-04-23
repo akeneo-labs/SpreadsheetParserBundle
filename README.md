@@ -32,12 +32,12 @@ To extract data from a spreadsheet, use the following code:
     {
         public method readSpreadsheet()
         {
-            $loader = $this->container->get('akeneo_spreadsheet_parser.workbook_loader');
-            $workbook = $loader->open('myfile.xlsx');
+            $loader = $this->container->get('akeneo_spreadsheet_parser.spreadsheet_loader');
+            $spreadsheet = $loader->open('myfile.xlsx');
 
-            $myWorksheetIndex = $workbook->getWorksheetIndex('myworksheet');
+            $myWorksheetIndex = $spreadsheet->getWorksheetIndex('myworksheet');
 
-            foreach ($workbook->createIterator($myWorksheetIndex) as $rowIndex => $values) {
+            foreach ($spreadsheet->createRowIterator($myWorksheetIndex) as $rowIndex => $values) {
                 var_dump($rowIndex, $values);
             }
         }
