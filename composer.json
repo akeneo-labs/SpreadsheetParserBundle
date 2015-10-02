@@ -1,5 +1,5 @@
 {
-    "name": "akeneo/spreadsheet-parser-bundle",
+    "name": "akeneo-labs/spreadsheet-parser-bundle",
     "type": "symfony-bundle",
     "description": "Akeneo spreadsheet parser bundle",
     "keywords": ["akeneo", "excel", "xlsx", "reader", "parser", "spreadsheet"],
@@ -17,7 +17,7 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/symfony": "2.*",
-        "akeneo/spreadsheet-parser": "1.1.*"
+        "akeneo-labs/spreadsheet-parser": "1.1.*"
     },
     "config": {
         "bin-dir": "bin"
