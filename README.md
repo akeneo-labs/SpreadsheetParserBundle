@@ -11,7 +11,7 @@ Installing the bundle
 
 From your application root:
 
-    $ php composer.phar require --prefer-dist "akeneo/spreadsheet-parser-bundle"
+    $ php composer.phar require --prefer-dist "akeneo-labs/spreadsheet-parser-bundle"
 
 
 You will then have to add the bundle to your AppKernel :
