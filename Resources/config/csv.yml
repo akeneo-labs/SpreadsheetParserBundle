@@ -8,15 +8,15 @@ parameters:
 services:
     akeneo_spreadsheet_parser.csv.row_iterator_factory:
         public: false
-        class: %akeneo_spreadsheet_parser.csv.row_iterator_factory.class%
+        class: '%akeneo_spreadsheet_parser.csv.row_iterator_factory.class%'
         arguments:
-            - %akeneo_spreadsheet_parser.csv.row_iterator.class%
+            - '%akeneo_spreadsheet_parser.csv.row_iterator.class%'
 
     akeneo_spreadsheet_parser.csv.spreadsheet_loader:
-        class: %akeneo_spreadsheet_parser.csv.spreadsheet_loader.class%
+        class: '%akeneo_spreadsheet_parser.csv.spreadsheet_loader.class%'
         arguments:
-            - @akeneo_spreadsheet_parser.csv.row_iterator_factory
-            - %akeneo_spreadsheet_parser.csv.spreadsheet.class%
-            - %akeneo_spreadsheet_parser.csv.sheet_name%
+            - '@akeneo_spreadsheet_parser.csv.row_iterator_factory'
+            - '%akeneo_spreadsheet_parser.csv.spreadsheet.class%'
+            - '%akeneo_spreadsheet_parser.csv.sheet_name%'
         tags:
             - { name: akeneo_spreadsheet_parser.spreadsheet_loader, alias: csv }

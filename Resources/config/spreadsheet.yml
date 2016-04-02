@@ -3,4 +3,4 @@ parameters:
 
 services:
     akeneo_spreadsheet_parser.spreadsheet_loader:
-        class: %akeneo_spreadsheet_parser.spreadsheet_loader.class%
+        class: '%akeneo_spreadsheet_parser.spreadsheet_loader.class%'
