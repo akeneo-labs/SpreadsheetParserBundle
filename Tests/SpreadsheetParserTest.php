@@ -2,7 +2,7 @@
 
 namespace Akeneo\Bundle\SpreadsheetParserBundle\Tests;
 
-use Symfony\Bundle\SecurityBundle\Tests\Functional\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Tests the dependency injection
@@ -11,7 +11,7 @@ use Symfony\Bundle\SecurityBundle\Tests\Functional\WebTestCase;
  * @copyright 2013 Akeneo SAS (http://www.akeneo.com)
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-class SpreadsheetParserTest extends \Symfony\Bundle\FrameworkBundle\Test\WebTestCase
+class SpreadsheetParserTest extends WebTestCase
 {
     protected function setUp()
     {
